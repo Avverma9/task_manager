@@ -53,7 +53,7 @@ const loginData = async function (req, res) {
         return res.status(400).send({ Status: false, massage: "Plase Enter Valid UserName And Password" })}
   
       let userToken = jwt.sign({
-        userId: userInfo._id.toString(),//ye thi dikaat U h hona smal tha
+        userId: userInfo._id.toString(),
         iat: Date.now()
       },
       process.env.Secret,{expiresIn:"18000s"}
